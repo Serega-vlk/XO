@@ -25,6 +25,12 @@ public class View {
         table[5][6] = '3';
     }
 
+    public void printRules(){
+        System.out.println("Вводите букву ряда и номер колонки вместе.");
+        System.out.println("Пример:\na1 или A1");
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+    }
+
     public void refresh(){
         char[][] gameField = controller.getTable().getGameField();
         int x = 2;
@@ -40,6 +46,9 @@ public class View {
     }
 
     public void drawTable(){
+        System.out.println("##########################\n" +
+                "##########################\n" +
+                "##########################");
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table[i].length; j++) {
                 System.out.print(table[i][j]);

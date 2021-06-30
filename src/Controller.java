@@ -1,5 +1,3 @@
-import javafx.application.Application;
-import javafx.stage.Stage;
 import model.Table;
 
 import java.io.BufferedReader;
@@ -19,13 +17,8 @@ public class Controller {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Controller game = new Controller();
         int move = 2;
-        System.out.println("Вводите сначала ряд и колонку вместе.");
-        System.out.println("Пример:\na1 или A1");
-        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+        game.view.printRules();
         while (true) {
-            System.out.println("##########################\n" +
-                    "##########################\n" +
-                    "##########################");
             game.view.refresh();
             game.view.drawTable();
             char winner = game.table.checkWin();
